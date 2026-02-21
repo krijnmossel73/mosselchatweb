@@ -1,0 +1,54 @@
+  function handleSubmit() {
+    var name = document.getElementById('cf-name').value.trim();
+    var email = document.getElementById('cf-email').value.trim();
+    var message = document.getElementById('cf-message').value.trim();
+
+    if (!name || !email) {
+      alert(currentLang === 'nl'
+        ? 'Vul alstublieft uw naam en e-mail in.'
+        : 'Please fill in your name and email.');
+      return;
+    }
+
+    if (!message) {
+      alert(currentLang === 'nl'
+        ? 'Vul alstublieft een bericht in.'
+        : 'Please enter a message.');
+      return;
+    }
+
+    gtag_report_conversion();
+
+    var btn = document.getElementById('formSubmitBtn');
+    btn.disabled = true;
+    btn.querySelector('span').textContent = currentLang === 'nl' ? 'Verzenden...' : 'Sending...';
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        company: document.getElementById('cf-company').value.trim(),
+        service: document.getElementById('cf-service').value,
+        message: message,
+      }),
+    })
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      if (data.success) {
+        document.getElementById('contactFormWrap').style.display = 'none';
+        document.getElementById('formSuccess').classList.add('show');
+      } else {
+        throw new Error(data.error || 'Unknown error');
+      }
+    })
+    .catch(function(err) {
+      console.error('Form error:', err);
+      alert(currentLang === 'nl'
+        ? 'Er is iets misgegaan. Stuur een e-mail naar krijn@mossel.cloud.'
+        : 'Something went wrong. Please email krijn@mossel.cloud directly.');
+      btn.disabled = false;
+      btn.querySelector('span').textContent = currentLang === 'nl' ? 'Verstuur Bericht' : 'Send Message';
+    });
+  }
