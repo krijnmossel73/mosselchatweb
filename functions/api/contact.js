@@ -19,11 +19,11 @@ export async function onRequestPost(context) {
     }
 
     const serviceLabels = {
-      cto: 'Fractional CTO & Advisory',
-      observability: 'Observability & Splunk',
-      cloud: 'Cloud Architecture & Migration',
-      chatbot: 'AI Chatbot Development',
-      other: 'Other',
+      'chatbot-management': 'White-Glove Chatbot Management',
+      'chatbot-build':      'Chatbot Build & Handover',
+      'chatbot-strategy':   'Chatbot Strategy & Audit',
+      'integrations':       'Integrations & Automation',
+      'other':              'Other / Something else',
     };
 
     const serviceName = serviceLabels[service] || service || 'Not specified';
@@ -37,7 +37,7 @@ export async function onRequestPost(context) {
       },
       body: JSON.stringify({
         sender: {
-          name: 'Mossel Cloud Website',
+          name: 'mossel.chat Website',
           email: 'krijn@mossel.cloud',
         },
         to: [{
@@ -50,7 +50,7 @@ export async function onRequestPost(context) {
         },
         subject: `New inquiry: ${serviceName} — ${name}`,
         htmlContent: `
-          <h2>New contact form submission</h2>
+          <h2>New contact form submission — mossel.chat</h2>
           <table style="border-collapse:collapse;width:100%;max-width:600px;">
             <tr><td style="padding:8px 12px;font-weight:bold;border-bottom:1px solid #eee;">Name</td><td style="padding:8px 12px;border-bottom:1px solid #eee;">${name}</td></tr>
             <tr><td style="padding:8px 12px;font-weight:bold;border-bottom:1px solid #eee;">Email</td><td style="padding:8px 12px;border-bottom:1px solid #eee;"><a href="mailto:${email}">${email}</a></td></tr>
