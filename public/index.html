@@ -783,11 +783,11 @@
           <select id="cf-service">
             <option value="" disabled selected
               data-en="Select a service..." data-nl="Selecteer een dienst...">Select a service...</option>
-            <option data-en="White-Glove Chatbot Management"  data-nl="Volledig Ontzorgd Chatbot Beheer">White-Glove Chatbot Management</option>
-            <option data-en="Chatbot Build &amp; Handover"    data-nl="Chatbot Bouw &amp; Oplevering">Chatbot Build &amp; Handover</option>
-            <option data-en="Chatbot Strategy &amp; Audit"    data-nl="Chatbot Strategie &amp; Audit">Chatbot Strategy &amp; Audit</option>
-            <option data-en="Integrations &amp; Automation"   data-nl="Integraties &amp; Automatisering">Integrations &amp; Automation</option>
-            <option data-en="Something else"                  data-nl="Iets anders">Something else</option>
+            <option value="chatbot-management"  data-en="White-Glove Chatbot Management"  data-nl="Volledig Ontzorgd Chatbot Beheer">White-Glove Chatbot Management</option>
+            <option value="chatbot-build"       data-en="Chatbot Build &amp; Handover"    data-nl="Chatbot Bouw &amp; Oplevering">Chatbot Build &amp; Handover</option>
+            <option value="chatbot-strategy"    data-en="Chatbot Strategy &amp; Audit"    data-nl="Chatbot Strategie &amp; Audit">Chatbot Strategy &amp; Audit</option>
+            <option value="integrations"        data-en="Integrations &amp; Automation"   data-nl="Integraties &amp; Automatisering">Integrations &amp; Automation</option>
+            <option value="other"               data-en="Something else"                  data-nl="Iets anders">Something else</option>
           </select>
         </div>
         <div class="form-group">
@@ -895,15 +895,9 @@
 
   function handleSubmit(e) {
     e.preventDefault();
-    document.getElementById('contactForm').style.display = 'none';
-    const success = document.getElementById('formSuccess');
-    success.classList.add('show');
-    // Re-apply current language to the success message
-    setLang(currentLang);
-  }
-  function handleSubmit() {
-    var name = document.getElementById('cf-name').value.trim();
-    var email = document.getElementById('cf-email').value.trim();
+
+    var name    = document.getElementById('cf-name').value.trim();
+    var email   = document.getElementById('cf-email').value.trim();
     var message = document.getElementById('cf-message').value.trim();
 
     if (!name || !email) {
@@ -912,15 +906,12 @@
         : 'Please fill in your name and email.');
       return;
     }
-
     if (!message) {
       alert(currentLang === 'nl'
         ? 'Vul alstublieft een bericht in.'
         : 'Please enter a message.');
       return;
     }
-
-    gtag_report_conversion();
 
     var btn = document.getElementById('formSubmitBtn');
     btn.disabled = true;
@@ -930,8 +921,8 @@
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        name: name,
-        email: email,
+        name:    name,
+        email:   email,
         company: document.getElementById('cf-company').value.trim(),
         service: document.getElementById('cf-service').value,
         message: message,
@@ -941,7 +932,9 @@
     .then(function(data) {
       if (data.success) {
         document.getElementById('contactForm').style.display = 'none';
-        document.getElementById('formSuccess').classList.add('show');
+        var success = document.getElementById('formSuccess');
+        success.classList.add('show');
+        setLang(currentLang);
       } else {
         throw new Error(data.error || 'Unknown error');
       }
