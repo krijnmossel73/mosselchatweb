@@ -4,6 +4,72 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>mossel.chat — White-Glove AI Chatbot Development</title>
+
+  <!-- ═══ SEO ═══ -->
+  <meta name="description" content="White-glove AI chatbot development and management for companies that need a professional public-facing chatbot — built on Botpress, fully managed by a 20+ year enterprise technology veteran based in the Netherlands.">
+  <meta name="keywords" content="AI chatbot development, Botpress, chatbot management, white-glove chatbot, AI customer service, chatbot Netherlands, DACH, B2B chatbot, lead qualification bot, conversational AI">
+  <meta name="author" content="Krijn Mossel">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mossel.chat/">
+
+  <!-- ═══ Open Graph (LinkedIn, Facebook, WhatsApp) ═══ -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mossel.chat/">
+  <meta property="og:title" content="mossel.chat — White-Glove AI Chatbot Development">
+  <meta property="og:description" content="Production-ready Botpress chatbots, designed, built, and managed end-to-end. No internal AI team needed — just results.">
+  <meta property="og:image" content="https://mossel.chat/favicon-256.png">
+  <meta property="og:image:width" content="256">
+  <meta property="og:image:height" content="256">
+  <meta property="og:locale" content="en_NL">
+  <meta property="og:locale:alternate" content="nl_NL">
+  <meta property="og:site_name" content="mossel.chat">
+
+  <!-- ═══ Twitter / X Card ═══ -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://mossel.chat/">
+  <meta name="twitter:title" content="mossel.chat — White-Glove AI Chatbot Development">
+  <meta name="twitter:description" content="Production-ready Botpress chatbots, designed, built, and managed end-to-end. No internal AI team needed.">
+  <meta name="twitter:image" content="https://mossel.chat/favicon-256.png">
+
+  <!-- ═══ Structured Data (JSON-LD) ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "mossel.chat",
+    "url": "https://mossel.chat",
+    "logo": "https://mossel.chat/favicon-256.png",
+    "description": "White-glove AI chatbot development and management. Production-ready Botpress chatbots designed, built, and managed end-to-end for scale-ups and mid-market companies.",
+    "founder": {
+      "@type": "Person",
+      "name": "Krijn Mossel",
+      "jobTitle": "Founder & Principal Consultant",
+      "sameAs": "https://www.linkedin.com/in/krijnmossel/"
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Mossel Cloud",
+      "url": "https://mossel.cloud"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Purmerend",
+      "addressCountry": "NL"
+    },
+    "areaServed": ["NL", "DE", "BE", "EU"],
+    "serviceType": [
+      "AI Chatbot Development",
+      "Chatbot Management",
+      "Botpress Configuration",
+      "Conversational AI",
+      "Chatbot Strategy & Audit"
+    ],
+    "knowsAbout": ["Botpress", "Conversational AI", "Claude", "GPT-4", "CRM Integration", "WhatsApp Chatbots", "Lead Qualification"],
+    "telephone": "+31618867949",
+    "email": "krijn@mossel.cloud"
+  }
+  </script>
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16904185495"></script>
@@ -61,6 +127,16 @@
       font-weight: 500; margin-left: 2rem; transition: color 0.2s;
     }
     nav a:hover { color: var(--ink); }
+    .nav-book {
+      margin-left: 1.5rem !important;
+      background: var(--accent) !important;
+      color: white !important;
+      padding: 0.45rem 1rem !important;
+      border-radius: 6px !important;
+      font-weight: 600 !important;
+      transition: background 0.2s, transform 0.2s !important;
+    }
+    .nav-book:hover { background: #155a40 !important; color: white !important; transform: translateY(-1px) !important; }
     .lang-toggle {
       margin-left: 2rem; display: flex;
       background: var(--card); border: 1px solid var(--line);
@@ -295,6 +371,43 @@
     .form-success h3 { color: white; font-size: 1.2rem; margin-bottom: 0.5rem; }
     .form-success p { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
 
+    /* DEMO SECTION */
+    .demo-section {
+      background: var(--accent-light);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 3.5rem 2rem;
+    }
+    .demo-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+    }
+    .demo-bubble {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      background: var(--accent); color: white;
+      padding: 0.9rem 1.75rem; border-radius: 50px;
+      font-weight: 600; font-size: 0.95rem; cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(26,107,78,0.3);
+      white-space: nowrap; border: none; font-family: 'DM Sans', sans-serif;
+    }
+    .demo-bubble:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,107,78,0.35); }
+    .demo-bubble svg { width: 22px; height: 22px; flex-shrink: 0; }
+    @media (max-width: 700px) {
+      .demo-inner { flex-direction: column; align-items: flex-start; }
+    }
+
+    .cal-btn {
+      display: inline-flex; align-items: center;
+      background: var(--accent); color: white;
+      padding: 0.85rem 1.5rem; border-radius: 8px;
+      text-decoration: none; font-weight: 600; font-size: 0.95rem;
+      margin-bottom: 2rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(26,107,78,0.3);
+    }
+    .cal-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,107,78,0.4); color: white; }
+
     /* FOOTER */
     footer {
       border-top: 1px solid var(--line); padding: 2rem;
@@ -346,6 +459,9 @@
       <a href="#use-cases"  data-en="Use cases"  data-nl="Toepassingen">Use cases</a>
       <a href="#contact"    data-en="Contact"    data-nl="Contact">Contact</a>
       <a href="https://mossel.cloud" target="_blank" rel="noopener">mossel.cloud ↗</a>
+      <a target="_blank" class="nav-book"
+         href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ15LIMZ5r_e5n3MCUXunuySrt1XLPSG1iZVQNvDvQ47q8DL5yKJ51HFbLQ2qOCj1X1TTmR9H7Gh"
+         data-en="Book a call" data-nl="Plan een gesprek">Book a call</a>
       <div class="lang-toggle">
         <button class="lang-btn active" data-lang="en">EN</button>
         <button class="lang-btn"        data-lang="nl">NL</button>
@@ -659,6 +775,11 @@
          data-nl="Gratis kennismakingsgesprek van 30 minuten — geen verkooppraatje, gewoon eerlijk advies over wat een chatbot voor jouw bedrijf kan doen en of we goed bij elkaar passen.">
         Free 30-minute discovery call — no pitch, just honest advice about what a chatbot can do for your business and whether we're the right fit.
       </p>
+      <a target="_blank"
+         href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ15LIMZ5r_e5n3MCUXunuySrt1XLPSG1iZVQNvDvQ47q8DL5yKJ51HFbLQ2qOCj1X1TTmR9H7Gh"
+         class="cal-btn"
+         data-en="📅 Pick a time — free 30 min call"
+         data-nl="📅 Kies een tijd — gratis 30 min gesprek">📅 Pick a time — free 30 min call</a>
       <div class="contact-detail">
         <div class="contact-detail-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
@@ -700,11 +821,11 @@
           <select id="cf-service">
             <option value="" disabled selected
               data-en="Select a service..." data-nl="Selecteer een dienst...">Select a service...</option>
-            <option data-en="White-Glove Chatbot Management"  data-nl="Volledig Ontzorgd Chatbot Beheer">White-Glove Chatbot Management</option>
-            <option data-en="Chatbot Build &amp; Handover"    data-nl="Chatbot Bouw &amp; Oplevering">Chatbot Build &amp; Handover</option>
-            <option data-en="Chatbot Strategy &amp; Audit"    data-nl="Chatbot Strategie &amp; Audit">Chatbot Strategy &amp; Audit</option>
-            <option data-en="Integrations &amp; Automation"   data-nl="Integraties &amp; Automatisering">Integrations &amp; Automation</option>
-            <option data-en="Something else"                  data-nl="Iets anders">Something else</option>
+            <option value="chatbot-management"  data-en="White-Glove Chatbot Management"  data-nl="Volledig Ontzorgd Chatbot Beheer">White-Glove Chatbot Management</option>
+            <option value="chatbot-build"       data-en="Chatbot Build &amp; Handover"    data-nl="Chatbot Bouw &amp; Oplevering">Chatbot Build &amp; Handover</option>
+            <option value="chatbot-strategy"    data-en="Chatbot Strategy &amp; Audit"    data-nl="Chatbot Strategie &amp; Audit">Chatbot Strategy &amp; Audit</option>
+            <option value="integrations"        data-en="Integrations &amp; Automation"   data-nl="Integraties &amp; Automatisering">Integrations &amp; Automation</option>
+            <option value="other"               data-en="Something else"                  data-nl="Iets anders">Something else</option>
           </select>
         </div>
         <div class="form-group">
@@ -726,6 +847,33 @@
           Thank you for reaching out. I'll get back to you within 24 hours.
         </p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO SECTION -->
+<section class="demo-section">
+  <div class="demo-inner">
+    <div class="demo-text">
+      <div class="hero-label" style="margin-bottom:1rem;"
+        data-en="Live demo"
+        data-nl="Live demo">Live demo</div>
+      <h2 style="font-size:1.8rem; font-weight:700; letter-spacing:-0.5px; margin-bottom:0.75rem;"
+        data-en="This is what we build for you."
+        data-nl="Dit bouwen wij voor jou.">This is what we build for you.</h2>
+      <p style="font-size:0.95rem; color:var(--mid); line-height:1.75; max-width:480px;"
+        data-en="The chat bubble in the bottom-right corner is a live Botpress chatbot — built and managed by mossel.chat. Click it to see what your customers would experience."
+        data-nl="De chatknop rechtsonder is een live Botpress chatbot — gebouwd en beheerd door mossel.chat. Klik erop om te zien wat jouw klanten ervaren.">
+        The chat bubble in the bottom-right corner is a live Botpress chatbot — built and managed by mossel.chat. Click it to see what your customers would experience.
+      </p>
+    </div>
+    <div class="demo-cta">
+      <button class="demo-bubble" onclick="window.botpressWebChat && window.botpressWebChat.open ? window.botpressWebChat.open() : document.querySelector('.bp-widget-btn') && document.querySelector('.bp-widget-btn').click()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+        </svg>
+        <span data-en="Try the chatbot" data-nl="Probeer de chatbot">Try the chatbot</span>
+      </button>
     </div>
   </div>
 </section>
@@ -785,15 +933,9 @@
 
   function handleSubmit(e) {
     e.preventDefault();
-    document.getElementById('contactForm').style.display = 'none';
-    const success = document.getElementById('formSuccess');
-    success.classList.add('show');
-    // Re-apply current language to the success message
-    setLang(currentLang);
-  }
-  function handleSubmit() {
-    var name = document.getElementById('cf-name').value.trim();
-    var email = document.getElementById('cf-email').value.trim();
+
+    var name    = document.getElementById('cf-name').value.trim();
+    var email   = document.getElementById('cf-email').value.trim();
     var message = document.getElementById('cf-message').value.trim();
 
     if (!name || !email) {
@@ -802,15 +944,12 @@
         : 'Please fill in your name and email.');
       return;
     }
-
     if (!message) {
       alert(currentLang === 'nl'
         ? 'Vul alstublieft een bericht in.'
         : 'Please enter a message.');
       return;
     }
-
-    gtag_report_conversion();
 
     var btn = document.getElementById('formSubmitBtn');
     btn.disabled = true;
@@ -820,8 +959,8 @@
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        name: name,
-        email: email,
+        name:    name,
+        email:   email,
         company: document.getElementById('cf-company').value.trim(),
         service: document.getElementById('cf-service').value,
         message: message,
@@ -830,8 +969,7 @@
     .then(function(response) { return response.json(); })
     .then(function(data) {
       if (data.success) {
-        document.getElementById('contactForm').style.display = 'none';
-        document.getElementById('formSuccess').classList.add('show');
+        window.location.href = '/thank-you';
       } else {
         throw new Error(data.error || 'Unknown error');
       }
@@ -846,6 +984,10 @@
     });
   }
 </script>
+
+<!-- ═══ Botpress Webchat ═══ -->
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/01/18/22/20260118222850-UHYFIS22.js" defer></script>
 
 </body>
 </html>
