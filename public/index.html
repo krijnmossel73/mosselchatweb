@@ -463,8 +463,8 @@
          href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ15LIMZ5r_e5n3MCUXunuySrt1XLPSG1iZVQNvDvQ47q8DL5yKJ51HFbLQ2qOCj1X1TTmR9H7Gh"
          data-en="Book a call" data-nl="Plan een gesprek">Book a call</a>
       <div class="lang-toggle">
-        <button class="lang-btn active" data-lang="en">EN</button>
-        <button class="lang-btn"        data-lang="nl">NL</button>
+        <button class="lang-btn       " data-lang="en">EN</button>
+        <button class="lang-btn active" data-lang="nl">NL</button>
       </div>
     </div>
   </div>
@@ -888,7 +888,7 @@
 </footer>
 
 <script>
-  let currentLang = 'en';
+  let currentLang = 'nl';
 
   function setLang(lang) {
     currentLang = lang;
@@ -927,6 +927,8 @@
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => setLang(btn.dataset.lang));
   });
+
+  setLang('nl');
 
   // Wire up nav links to re-translate their text on click
   // (they already have data-en / data-nl so setLang handles them)
